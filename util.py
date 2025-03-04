@@ -42,11 +42,6 @@ def get_entry_text(window):
 def msg_box(title, description):
     messagebox.showinfo(title, description)
 
-
-from deepface import DeepFace
-import os
-import pickle
-
 def recognize(img, db_path):
     try:
         result = DeepFace.find(img_path=img, db_path=db_path, enforce_detection=False)
